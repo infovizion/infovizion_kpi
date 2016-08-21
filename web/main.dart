@@ -2,7 +2,18 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 import 'dart:html';
+import 'package:infovizion_kpi/infovizion_kpi.dart';
 
 void main() {
-  querySelector('#output').text = 'Your Dart app is running.';
+  var data = [
+    new KpiItem()..actual = 3200,
+    new KpiItem()..actual = 3600,
+    new KpiItem()..actual = 3100,
+  ];
+  var kpi = new InfovizionKpi()
+    ..data = data
+    ..selector = '.wrapper'
+    ..width = 800
+    ..height = 200;
+  kpi.init();
 }
