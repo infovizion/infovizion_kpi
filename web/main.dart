@@ -6,14 +6,32 @@ import 'package:infovizion_kpi/infovizion_kpi.dart';
 
 void main() {
   var data = [
-    new KpiItem()..actual = 3200,
-    new KpiItem()..actual = 3600,
-    new KpiItem()..actual = 3100,
+    new KpiItem()
+      ..actual = 3200
+      ..measureName = 'Продажи'
+      ..previous = 2900,
+    new KpiItem()
+      ..actual = 3600
+      ..measureName = 'Наценка'
+      ..previous = 3500,
+    new KpiItem()
+      ..actual = 3100
+      ..measureName = 'Остатки'
+      ..previous = 3500,
+    new KpiItem()
+      ..actual = 1200
+      ..measureName = 'Упущенная прибыль'
+      ..previous = 2500,
   ];
   var kpi = new InfovizionKpi()
     ..data = data
     ..selector = '.wrapper'
-    ..width = 800
+    ..width = (window.innerWidth * 0.99).floor()
     ..height = 200;
-  kpi.init();
+  kpi.paint();
+  window.onResize.listen((_) {
+
+    kpi.width = (window.innerWidth * 0.99).floor();
+    kpi.paint();
+  });
 }

@@ -9,7 +9,7 @@ html, body {
 }
 
 .wrapper {
-    width: 900px;
+    width: 100%;
     height: 250px;
     border: 4px double black; /* Параметры границы */
 //    background: #fc3; /* Цвет фона */
