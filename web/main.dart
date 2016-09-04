@@ -2,7 +2,7 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 import 'dart:html';
-import 'package:infovizion_kpi/infovizion_kpi.dart';
+import 'package:infovizion/kpi/infovizion_kpi.dart';
 
 
 KpiFocus focus = KpiFocus.actual;
