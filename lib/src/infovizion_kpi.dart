@@ -16,7 +16,7 @@ class InfovizionKpi {
   KpiFocus focus = KpiFocus.actual;
   String selector;
   String maskId = 'delta-Mask';
-  bool contrast = true;
+  bool contrast = false;
   SelectionScope scope;
   Selection svg;
   List<KpiItem> data;
